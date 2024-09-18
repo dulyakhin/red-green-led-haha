@@ -10,6 +10,7 @@ GEN_OPTS__FLAG :=
 GEN_CMDS__FLAG := 
 
 ORDERED_OBJS += \
+"./GPIO_Driver.obj" \
 "./main.obj" \
 "../lnk_msp430fr2355.cmd" \
 $(GEN_CMDS__FLAG) \
@@ -142,8 +143,8 @@ dsadadad.out: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 # Other Targets
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)
-	-$(RM) "main.obj" 
-	-$(RM) "main.d" 
+	-$(RM) "GPIO_Driver.obj" "main.obj" 
+	-$(RM) "GPIO_Driver.d" "main.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 
